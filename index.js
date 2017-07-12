@@ -18,9 +18,12 @@ const app = express()
 const images = readdirSync('./static')
 const size = images.length
 
+const path = require('path')
+
 app.get('/', function (req, res) {
   const image = images[Math.floor(Math.random() * size)]
-  res.redirect(`/${image}`)
+  // res.redirect(`/${image}`)
+  res.sendFile(path.resolve(__dirname, 'static', image))
 })
 
 app.get('/ping', function (req, res) {
