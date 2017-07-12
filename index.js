@@ -2,6 +2,7 @@
 
 const {readdirSync} = require('fs')
 const express = require('express')
+const path = require('path')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -12,27 +13,21 @@ const app = express()
   .use(require('express-status-monitor')())
   .use(require('morgan')(isProduction ? 'combined' : 'dev'))
   .use(express.static('static'))
-
   .disable('x-powered-by')
 
+const staticFolder = path.resolve(__dirname, 'static')
 const images = readdirSync('./static')
 const size = images.length
 
-const path = require('path')
+const getRandomImage = () => images[Math.floor(Math.random() * size)]
 
-app.get('/', function (req, res) {
-  const image = images[Math.floor(Math.random() * size)]
-  // res.redirect(`/${image}`)
-  res.sendFile(path.resolve(__dirname, 'static', image))
-})
-
-app.get('/ping', function (req, res) {
-  res.send('OK')
-})
+app.get('/luck', (req, res) => res.redirect(`/${getRandomImage()}`))
+app.get('/ping', (req, res) => res.send('OK'))
+app.get('/', (req, res) => res.sendFile(path.resolve(staticFolder, getRandomImage())))
 
 const PORT = process.env.PORT || 3000
 
-app.listen(PORT, function () {
+app.listen(PORT, () => {
   console.log(`Running at http://localhost:${PORT}`)
   console.log(`Loaded ${size} images`)
 })
