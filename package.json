@@ -1,0 +1,53 @@
+{
+  "name": "timecards-api",
+  "description": "Bob Sponja Timecards API",
+  "homepage": "https://github.com/Kikobeats/timecards-api",
+  "version": "0.0.0",
+  "main": "index.js",
+  "files": [
+    "static",
+    "index.js"
+  ],
+  "author": {
+    "name": "Kiko Beats",
+    "url": "https://github.com/Kikobeats"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/timecards-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kikobeats/timecards-api/issues"
+  },
+  "keywords": [
+    "microservice",
+    "bob",
+    "sponja",
+    "timecards"
+  ],
+  "dependencies": {
+    "compression": "~1.7.0",
+    "express": "~4.15.3",
+    "express-status-monitor": "~0.1.9",
+    "helmet": "~3.6.1",
+    "morgan": "~1.8.2"
+  },
+  "devDependencies": {
+    "git-dirty": "latest",
+    "nodemon": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "lint": "standard-markdown && standard",
+    "pretest": "npm run lint",
+    "start": "node index.js",
+    "test": "exit 0",
+    "dev": "nodemon --exec \"npm start\" -e \"js\""
+  },
+  "license": "MIT"
+}
