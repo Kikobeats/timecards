@@ -8,9 +8,11 @@ const isProduction = process.env.NODE_ENV === 'production'
 const app = express()
   .use(require('helmet')())
   .use(require('compression')())
+  .use(require('cors')())
   .use(require('express-status-monitor')())
   .use(require('morgan')(isProduction ? 'combined' : 'dev'))
   .use(express.static('static'))
+
   .disable('x-powered-by')
 
 const images = readdirSync('./static')
