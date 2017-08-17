@@ -1,4 +1,4 @@
-# timecards-api
+# timecards-microservice
 
 <p align="center">
   <br>
@@ -11,7 +11,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/timecards-api.svg?style=flat-square)](https://www.npmjs.org/package/timecards-api)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
-> Bob Sponja Timecards API
+> Bob Sponja Timecards microservice.
 
 ## License
 
