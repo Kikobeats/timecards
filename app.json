@@ -1,0 +1,11 @@
+{
+  "name": "timecards-api",
+  "description": "Bob Sponja Timecards API",
+  "repository": "https://github.com/Kikobeats/timecards-api",
+  "keywords": [
+    "microservice",
+    "bob",
+    "sponja",
+    "timecards"
+  ],
+}
