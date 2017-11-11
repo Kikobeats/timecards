@@ -24,10 +24,10 @@
   "dependencies": {
     "compression": "~1.7.0",
     "cors": "~2.8.3",
-    "express": "~4.15.3",
+    "express": "~4.16.2",
     "express-status-monitor": "~1.0.0",
-    "helmet": "~3.8.1",
-    "morgan": "~1.8.2"
+    "helmet": "~3.9.0",
+    "morgan": "~1.9.0"
   },
   "devDependencies": {
     "git-dirty": "latest",
