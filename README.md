@@ -1,7 +1,5 @@
 # timecards-microservice
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Kikobeats/timecards-microservice.svg)](https://greenkeeper.io/)
-
 <p align="center">
   <br>
   <img src="https://cdn.rawgit.com/Kikobeats/timecards-api/3a7c885c/static/001%20-%20TpKZIF4.jpg?raw=true" alt="timecards-api">
