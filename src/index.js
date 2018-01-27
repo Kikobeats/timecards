@@ -3,15 +3,13 @@
 const {readdirSync} = require('fs')
 const path = require('path')
 
-const isProduction = process.env.NODE_ENV === 'production'
-
 module.exports = (app, express) => {
   app
     .use(require('helmet')())
     .use(require('compression')())
     .use(require('cors')())
     .use(require('express-status-monitor')())
-    .use(require('morgan')(isProduction ? 'combined' : 'dev'))
+    .use(require('morgan')('short'))
     .use(express.static('static'))
     .disable('x-powered-by')
 
