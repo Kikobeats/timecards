@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "git-dirty": "latest",
-    "standard": "latest",
+    "standard": "11",
     "standard-markdown": "latest",
     "svr": "latest"
   },
@@ -45,7 +45,7 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "dev": "svr",
-    "lint": "standard-markdown && standard",
+    "lint": "standard-markdown README.md && standard",
     "pretest": "npm run lint",
     "start": "node src/server.js",
     "test": "exit 0"
