@@ -1,7 +1,7 @@
 {
   "name": "timecards-api",
   "description": "Bob Sponja Timecards API",
-  "homepage": "https://github.com/Kikobeats/timecards-api",
+  "homepage": "https://github.com/Kikobeats/timecards-microservice",
   "version": "0.0.0",
   "main": "src/index.js",
   "author": {
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kikobeats/timecards-api.git"
+    "url": "git+https://github.com/Kikobeats/timecards-microservice.git"
   },
   "bugs": {
-    "url": "https://github.com/Kikobeats/timecards-api/issues"
+    "url": "https://github.com/Kikobeats/timecards-microservice/issues"
   },
   "keywords": [
     "bob",
@@ -26,10 +26,15 @@
     "cors": "~2.8.3",
     "express": "~4.16.2",
     "helmet": "~3.13.0",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "unique-random-array": "~1.0.1"
   },
   "devDependencies": {
+    "download": "latest",
     "git-dirty": "latest",
+    "got": "latest",
+    "html-urls": "latest",
+    "p-all": "latest",
     "standard": "11",
     "standard-markdown": "latest",
     "svr": "latest"
