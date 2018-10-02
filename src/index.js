@@ -1,6 +1,6 @@
 'use strict'
 
-const {readdirSync} = require('fs')
+const { readdirSync } = require('fs')
 const path = require('path')
 
 module.exports = (app, express) => {
@@ -8,7 +8,6 @@ module.exports = (app, express) => {
     .use(require('helmet')())
     .use(require('compression')())
     .use(require('cors')())
-    .use(require('express-status-monitor')())
     .use(require('morgan')('short'))
     .use(express.static('static'))
     .disable('x-powered-by')
