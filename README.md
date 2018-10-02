@@ -9,8 +9,6 @@
 
 [![Dependency status](https://img.shields.io/david/Kikobeats/timecards-api.svg?style=flat-square)](https://david-dm.org/Kikobeats/timecards-api)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/timecards-api.svg?style=flat-square)](https://david-dm.org/Kikobeats/timecards-api#info=devDependencies)
-[![NPM Status](https://img.shields.io/npm/dm/timecards-api.svg?style=flat-square)](https://www.npmjs.org/package/timecards-api)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
