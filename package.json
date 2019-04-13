@@ -27,7 +27,7 @@
     "express": "~4.16.2",
     "helmet": "~3.16.0",
     "morgan": "~1.9.0",
-    "unique-random-array": "~1.0.1"
+    "unique-random-array": "~2.0.0"
   },
   "devDependencies": {
     "download": "latest",
