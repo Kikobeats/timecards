@@ -1,6 +1,6 @@
 <p align="center">
   <br>
-  <img src="/static/3_DAYS.jpg" alt="timecards">
+  <img src="https://vignette.wikia.nocookie.net/spongebob/images/0/02/3_DAYS.jpg/revision/latest?cb=20091008044606" alt="timecards">
   <br>
   <br>
 </p>
