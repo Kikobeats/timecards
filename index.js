@@ -18,7 +18,10 @@ router.use(require('morgan')('tiny'))
 
 const rand = uniqueRandomArray(data)
 
-router.get('/', (req, res) => got.stream(rand(), { cache }).pipe(res))
+router.get('/', (req, res) => {
+  res.setHeader('cache-control', 'no-cache')
+  return got.stream(rand(), { cache }).pipe(res)
+})
 router.get('/robots.txt', (req, res) => res.status(204).send())
 router.get('/favicon.txt', (req, res) => res.status(204).send())
 
