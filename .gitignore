@@ -29,4 +29,6 @@ coverage
 ############################
 # Other
 ############################
+.envrc
 .node_history
+data.json

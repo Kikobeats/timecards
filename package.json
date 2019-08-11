@@ -28,15 +28,15 @@
     "compression": "~1.7.4",
     "cors": "~2.8.5",
     "express": "~4.17.1",
+    "got": "~9.6.0",
     "helmet": "~3.20.0",
     "morgan": "~1.9.1",
     "unique-random-array": "~2.0.0"
   },
   "devDependencies": {
     "@microlink/mql": "latest",
-    "download": "latest",
     "git-dirty": "latest",
-    "p-all": "latest",
+    "json-future": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
     "svr": "latest"
@@ -52,6 +52,7 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
+    "postinstall": "node scripts/postinstall",
     "dev": "svr",
     "lint": "standard-markdown README.md && standard",
     "pretest": "npm run lint",
