@@ -1,0 +1,28 @@
+{
+  "name": "timecards",
+  "version": 2,
+  "public": true,
+  "regions": [
+    "all"
+  ],
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/robots.txt",
+      "status": 204
+    },
+    {
+      "src": "/favicon.ico",
+      "status": 204
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
+}

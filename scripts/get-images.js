@@ -1,27 +1,40 @@
 'use strict'
 
-const htmlUrls = require('html-urls')
+const mql = require('@microlink/mql')
 const download = require('download')
 const pAll = require('p-all')
-const got = require('got')
 
 const TARGET_URL = 'http://spongebob.wikia.com/wiki/List_of_time_cards'
-;(async () => {
-  try {
-    const { body } = await got(TARGET_URL)
 
-    const urls = htmlUrls({ html: body, url: TARGET_URL })
-      .map(link => link.normalizedUrl)
-      .filter(link => /revision\/latest/i.test(link) && !/wordmark|avatar/i.test(link))
-      .map(link => () => {
-        console.log(link)
-        return download(link, 'static')
-      })
+const main = async () => {
+  const { data } = await mql(TARGET_URL, {
+    rules: {
+      timecards: {
+        selectorAll: 'td > a.image',
+        attr: 'href',
+        type: 'url'
+      }
+    }
+  })
 
-    await pAll(urls, { concurrency: 2 })
-    console.log('Done!', urls.length)
-  } catch (err) {
+  const { timecards } = data
+
+  let count = 0
+
+  const toDownload = timecards.map(url => () => {
+    console.log(++count, url)
+    return download(url, 'static')
+  })
+  await pAll(toDownload, { concurrency: 4 })
+  return timecards.length
+}
+
+main()
+  .then(size => {
+    console.log(`\nDone! ${size} ✨`)
+    process.exit()
+  })
+  .catch(err => {
     console.error(err)
     process.exit(1)
-  }
-})()
+  })

@@ -1,23 +1,26 @@
 {
-  "name": "timecards-api",
-  "description": "Bob Sponja Timecards API",
-  "homepage": "https://github.com/Kikobeats/timecards-microservice",
+  "name": "timecards",
+  "description": "Bob Sponja time cards as service",
+  "homepage": "https://nicedoc.io/Kikobeats/timecards",
   "version": "0.0.0",
-  "main": "src/index.js",
+  "main": "index.js",
+  "bin": {
+    "timecards": "bin/server"
+  },
   "author": {
     "name": "Kiko Beats",
     "url": "https://github.com/Kikobeats"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kikobeats/timecards-microservice.git"
+    "url": "git+https://github.com/Kikobeats/timecards.git"
   },
   "bugs": {
-    "url": "https://github.com/Kikobeats/timecards-microservice/issues"
+    "url": "https://github.com/Kikobeats/timecards/issues"
   },
   "keywords": [
-    "bob",
     "microservice",
+    "bob",
     "sponja",
     "timecards"
   ],
@@ -30,10 +33,9 @@
     "unique-random-array": "~2.0.0"
   },
   "devDependencies": {
+    "@microlink/mql": "latest",
     "download": "latest",
     "git-dirty": "latest",
-    "got": "latest",
-    "html-urls": "latest",
     "p-all": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
@@ -43,15 +45,17 @@
     "node": ">= 8"
   },
   "files": [
+    "index.js",
     "src",
-    "static"
+    "static",
+    "bin"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "dev": "svr",
     "lint": "standard-markdown README.md && standard",
     "pretest": "npm run lint",
-    "start": "NODE_ENV=production node src/server.js",
+    "start": "NODE_ENV=production timecards",
     "test": "exit 0"
   },
   "license": "MIT"

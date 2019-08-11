@@ -1,7 +1,7 @@
 {
-  "name": "timecards-api",
-  "description": "Bob Sponja Timecards API",
-  "repository": "https://github.com/Kikobeats/timecards-api",
+  "name": "timecards",
+  "description": "Bob Sponja time cards as service",
+  "repository": "https://github.com/Kikobeats/timecards",
   "keywords": [
     "microservice",
     "bob",
