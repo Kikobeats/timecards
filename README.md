@@ -1,6 +1,6 @@
 <p align="center">
   <br>
-  <img src="https://cdn.rawgit.com/Kikobeats/timecards/3a7c885c/static/001%20-%20TpKZIF4.jpg?raw=true" alt="timecards">
+  <img src="/static/3_DAYS.jpg" alt="timecards">
   <br>
   <br>
 </p>
