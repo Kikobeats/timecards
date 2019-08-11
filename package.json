@@ -45,10 +45,10 @@
     "node": ">= 8"
   },
   "files": [
+    "bin",
     "index.js",
-    "src",
-    "static",
-    "bin"
+    "scripts",
+    "src"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
