@@ -1,12 +1,12 @@
 <p align="center">
   <br>
-  <img src="https://cdn.rawgit.com/Kikobeats/timecards-api/3a7c885c/static/001%20-%20TpKZIF4.jpg?raw=true" alt="timecards-api">
+  <img src="https://cdn.rawgit.com/Kikobeats/timecards/3a7c885c/static/001%20-%20TpKZIF4.jpg?raw=true" alt="timecards">
   <br>
   <br>
 </p>
 
-[![Dependency status](https://img.shields.io/david/Kikobeats/timecards-api.svg?style=flat-square)](https://david-dm.org/Kikobeats/timecards-api)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/timecards-api.svg?style=flat-square)](https://david-dm.org/Kikobeats/timecards-api#info=devDependencies)
+[![Dependency status](https://img.shields.io/david/Kikobeats/timecards.svg?style=flat-square)](https://david-dm.org/Kikobeats/timecards)
+[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/timecards.svg?style=flat-square)](https://david-dm.org/Kikobeats/timecards#info=devDependencies)
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/Kikobeats/timecards)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
