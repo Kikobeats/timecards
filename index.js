@@ -19,7 +19,7 @@ router.use(require('morgan')('tiny'))
 const rand = uniqueRandomArray(data)
 
 router.get('/', (req, res) => {
-  res.setHeader('cache-control', 'no-cache')
+  res.writeHead(200, { 'Cache-Control': 's-maxage=0, max-age=0' });
   return got.stream(rand(), { cache }).pipe(res)
 })
 router.get('/robots.txt', (req, res) => res.status(204).send())
