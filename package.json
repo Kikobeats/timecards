@@ -28,8 +28,10 @@
     "compression": "~1.7.4",
     "cors": "~2.8.5",
     "express": "~4.17.1",
+    "file-extension": "~4.0.5",
     "got": "~9.6.0",
     "helmet": "~3.20.0",
+    "mime-types": "~2.1.24",
     "morgan": "~1.9.1",
     "unique-random-array": "~2.0.0"
   },

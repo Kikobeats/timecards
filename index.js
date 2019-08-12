@@ -1,7 +1,9 @@
 'use strict'
 
 const uniqueRandomArray = require('unique-random-array')
+const fileExtension = require('file-extension')
 const express = require('express')
+const mime = require('mime-types')
 const got = require('got')
 
 const data = require('./data.json')
@@ -18,9 +20,24 @@ router.use(require('morgan')('tiny'))
 
 const rand = uniqueRandomArray(data)
 
+const getExtension = str => {
+  const url = new URL(str)
+  url.hash = ''
+  url.search = ''
+  const normalizedUrl = url.toString().replace('/revision/latest', '')
+  return fileExtension(normalizedUrl)
+}
+
 router.get('/', (req, res) => {
-  res.setHeader('cache-control', 'no-cache')
-  return got.stream(rand(), { cache }).pipe(res)
+  const url = rand()
+  const extension = getExtension(url)
+  const contentType = mime.contentType(extension)
+  res.writeHead(200, {
+    'cache-control': 'no-cache',
+    'content-type': contentType
+  })
+
+  return got.stream(url, { cache }).pipe(res)
 })
 router.get('/robots.txt', (req, res) => res.status(204).send())
 router.get('/favicon.txt', (req, res) => res.status(204).send())
