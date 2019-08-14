@@ -6,7 +6,7 @@ const express = require('express')
 const mime = require('mime-types')
 const got = require('got')
 
-const data = require('./data.json')
+const data = require('../data.json')
 
 const { Router } = express
 

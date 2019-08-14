@@ -3,7 +3,7 @@
   "description": "Bob Sponja time cards as service",
   "homepage": "https://nicedoc.io/Kikobeats/timecards",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
     "timecards": "bin/server"
   },
