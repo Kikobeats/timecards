@@ -41,7 +41,8 @@
     "json-future": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "svr": "latest"
+    "svr": "latest",
+    "untracked": "latest"
   },
   "engines": {
     "node": ">= 8"
@@ -52,6 +53,7 @@
     "src"
   ],
   "scripts": {
+    "build": "untracked > .nowignore",
     "clean": "rm -rf node_modules",
     "postinstall": "node scripts/postinstall",
     "dev": "svr",
