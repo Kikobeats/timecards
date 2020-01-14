@@ -5,12 +5,8 @@
   <br>
 </p>
 
-[![Dependency status](https://img.shields.io/david/Kikobeats/timecards.svg?style=flat-square)](https://david-dm.org/Kikobeats/timecards)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/timecards.svg?style=flat-square)](https://david-dm.org/Kikobeats/timecards#info=devDependencies)
-
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/Kikobeats/timecards)[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/Kikobeats/timecards)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/Kikobeats/timecards)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 > Bob Sponja time cards as service.
 
