@@ -29,8 +29,8 @@ const getExtension = str => {
 }
 
 router.get('/', (req, res) => {
-  const url = rand()
-  const extension = getExtension(url)
+  const { url, type } = rand()
+  const extension = type || getExtension(url)
   const contentType = mime.contentType(extension)
   res.writeHead(200, {
     'cache-control': 'no-cache',
