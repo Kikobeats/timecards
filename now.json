@@ -2,9 +2,6 @@
   "name": "timecards",
   "version": 2,
   "public": true,
-  "regions": [
-    "all"
-  ],
   "builds": [
     {
       "src": "src/index.js",
