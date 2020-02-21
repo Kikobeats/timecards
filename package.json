@@ -30,7 +30,7 @@
     "debug-logfmt": "~1.0.4",
     "express": "~4.17.1",
     "file-extension": "~4.0.5",
-    "got": "~10.5.2",
+    "got": "~10.6.0",
     "helmet": "~3.21.2",
     "mime-types": "~2.1.26",
     "morgan": "~1.9.1",
