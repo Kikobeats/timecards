@@ -31,9 +31,9 @@
     "express": "~4.17.1",
     "file-extension": "~4.0.5",
     "got": "~10.7.0",
-    "helmet": "~3.21.2",
+    "helmet": "~3.22.0",
     "mime-types": "~2.1.26",
-    "morgan": "~1.9.1",
+    "morgan": "~1.10.0",
     "unique-random-array": "~2.0.0"
   },
   "devDependencies": {
