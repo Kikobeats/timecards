@@ -20,8 +20,6 @@ router.use(require('morgan')('tiny'))
 
 const rand = uniqueRandomArray(data)
 
-const imageProxy = url => `https://images.weserv.nl/?url=${encodeURIComponent(url)}&l=9&af&il&n=-1`
-
 const getExtension = str => {
   const url = new URL(str)
   url.hash = ''
@@ -39,7 +37,7 @@ router.get('/', (req, res) => {
     'content-type': contentType
   })
 
-  return got.stream(imageProxy(url), { cache }).pipe(res)
+  return got.stream(url, { cache }).pipe(res)
 })
 router.get('/robots.txt', (req, res) => res.status(204).send())
 router.get('/favicon.txt', (req, res) => res.status(204).send())
