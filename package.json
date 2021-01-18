@@ -30,9 +30,9 @@
     "debug-logfmt": "~1.0.4",
     "express": "~4.17.1",
     "file-extension": "~4.0.5",
-    "got": "~11.8.0",
-    "helmet": "~4.3.1",
-    "mime-types": "~2.1.27",
+    "got": "~11.8.1",
+    "helmet": "~4.4.0",
+    "mime-types": "~2.1.28",
     "morgan": "~1.10.0",
     "unique-random-array": "~2.0.0"
   },
