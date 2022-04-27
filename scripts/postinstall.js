@@ -13,7 +13,7 @@ const main = async () => {
       timecards: {
         selectorAll: 'td > a.image',
         attr: 'href',
-        type: 'url'
+        type: 'image'
       }
     }
   })
