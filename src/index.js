@@ -3,7 +3,7 @@
 const uniqueRandomArray = require('unique-random-array')
 const fileExtension = require('file-extension')
 const express = require('express')
-const mime = require('mime-types')
+const mime = require('mrmime')
 const got = require('got')
 
 const data = require('../data.json')
@@ -31,7 +31,8 @@ const getExtension = str => {
 router.get('/', (req, res) => {
   const { url, type } = rand()
   const extension = type || getExtension(url)
-  const contentType = mime.contentType(extension)
+  const contentType = mime.lookup(extension)
+
   res.writeHead(200, {
     'cache-control': 'no-cache',
     'content-type': contentType
