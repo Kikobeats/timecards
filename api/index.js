@@ -6,12 +6,15 @@ import data from '../data.json'
 
 const rand = uniqueRandomArray(data)
 
-export const config = { runtime: 'experimental-edge' }
+export const config = {
+  runtime: 'experimental-edge'
+}
 
 const proxyUrl = url =>
   `https://images.weserv.nl/?url=${encodeURIComponent(url)}&l=9&af&il&n=-1&w=800`
 
-const CACHE = Object.create(null)
+const baseUrl = ({ headers }) =>
+  `${headers.get('x-forwarded-proto')}://${headers.get('x-forwarded-host')}`
 
 const image = async url => {
   const res = await fetch(proxyUrl(url))
@@ -20,7 +23,7 @@ const image = async url => {
     {
       headers: {
         'access-control-allow-origin': '*',
-        'cache-control': 'no-cache',
+        'cache-control': 'public, max-age=31536000, immutable',
         'content-type': res.headers.get('content-type'),
         'content-length': res.headers.get('content-length')
       }
@@ -28,8 +31,14 @@ const image = async url => {
   ]
 }
 
-export default async () => {
-  const { url } = rand()
-  const [body, options] = CACHE[url] || (CACHE[url] = await image(url))
-  return new Response(body, options)
+export default async req => {
+  const urlObj = new URL(req.url, baseUrl(req))
+  const timestamp = urlObj.searchParams.get('t')
+
+  if (!timestamp) {
+    urlObj.searchParams.set('t', Date.now())
+    return Response.redirect(urlObj.toString())
+  }
+
+  return new Response(...(await image(rand().url)))
 }
