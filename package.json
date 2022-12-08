@@ -25,25 +25,14 @@
     "timecards"
   ],
   "dependencies": {
-    "compression": "~1.7.4",
-    "cors": "~2.8.5",
-    "debug-logfmt": "~1.0.4",
-    "express": "~4.18.1",
-    "file-extension": "~4.0.5",
-    "got": "~11.8.5",
-    "helmet": "~6.0.0",
-    "mrmime": "~1.0.1",
-    "morgan": "~1.10.0",
-    "unique-random-array": "~2.0.0"
+    "unique-random-array": "latest"
   },
   "devDependencies": {
     "@microlink/mql": "latest",
     "git-dirty": "latest",
     "json-future": "latest",
     "standard": "latest",
-    "standard-markdown": "latest",
-    "svr": "latest",
-    "untracked": "latest"
+    "standard-markdown": "latest"
   },
   "engines": {
     "node": ">= 10"
@@ -53,13 +42,10 @@
     "src"
   ],
   "scripts": {
-    "build": "untracked > .nowignore",
     "clean": "rm -rf node_modules",
     "postinstall": "node scripts/postinstall",
-    "dev": "TZ=UTC NODE_ENV=development DEBUG=timecards* node src/server.js",
     "lint": "standard-markdown README.md && standard",
     "pretest": "npm run lint",
-    "start": "TZ=UTC NODE_ENV=production DEBUG=timecards* node src/server.js",
     "test": "exit 0"
   },
   "license": "MIT"

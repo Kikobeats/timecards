@@ -32,3 +32,4 @@ coverage
 .envrc
 .node_history
 data.json
+.vercel

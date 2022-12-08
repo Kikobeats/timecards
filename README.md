@@ -1,14 +1,13 @@
 <p align="center">
   <br>
-  <img src="https://vignette.wikia.nocookie.net/spongebob/images/0/02/3_DAYS.jpg/revision/latest?cb=20091008044606" alt="timecards">
+  <img src="https://timecards.kikobeats.com/" alt="timecards" width="450">
   <br>
   <br>
 </p>
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/Kikobeats/timecards)
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKikobeats%2Ftimecards)
 
-> Bob Sponja time cards as service.
+> Bob Sponja time cards as service. Every hit is a different (random) image.
 
 ## License
 
