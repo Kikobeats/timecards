@@ -1,13 +1,6 @@
 {
-  "name": "timecards",
   "version": 2,
   "public": true,
-  "builds": [
-    {
-      "src": "src/index.js",
-      "use": "@now/node"
-    }
-  ],
   "routes": [
     {
       "src": "/robots.txt",
@@ -15,11 +8,11 @@
     },
     {
       "src": "/favicon.ico",
-      "status": 204
+      "dest": "https://static.wikia.nocookie.net/spongebob/images/4/4a/Site-favicon.ico/revision/latest"
     },
     {
       "src": "/(.*)",
-      "dest": "/src/index.js"
+      "dest": "/api/index.js"
     }
   ]
 }
