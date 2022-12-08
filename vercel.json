@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "public": true,
   "routes": [
     {
@@ -8,7 +7,7 @@
     },
     {
       "src": "/favicon.ico",
-      "dest": "https://static.wikia.nocookie.net/spongebob/images/4/4a/Site-favicon.ico/revision/latest"
+      "dest": "https://i.imgur.com/QXHZNoB.png"
     },
     {
       "src": "/(.*)",
