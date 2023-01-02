@@ -11,7 +11,15 @@ export const config = {
 }
 
 const proxyUrl = url =>
-  `https://images.weserv.nl/?url=${encodeURIComponent(url)}&l=9&af&il&n=-1&w=800`
+  `https://images.weserv.nl/?${new URLSearchParams({
+    url,
+    default: url,
+    l: 9,
+    af: '',
+    il: '',
+    n: -1,
+    w: 800
+  }).toString()}`
 
 const baseUrl = ({ headers }) =>
   `${headers.get('x-forwarded-proto')}://${headers.get('x-forwarded-host')}`
