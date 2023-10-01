@@ -7,7 +7,7 @@ import data from '../data.json'
 const rand = uniqueRandomArray(data)
 
 export const config = {
-  runtime: 'experimental-edge'
+  runtime: 'edge'
 }
 
 const proxyUrl = url =>

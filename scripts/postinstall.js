@@ -21,11 +21,4 @@ const main = async () => {
   return jsonFuture.saveAsync('data.json', images)
 }
 
-main()
-  .then(size => {
-    process.exit()
-  })
-  .catch(err => {
-    console.error(err)
-    process.exit(1)
-  })
+main().catch(error => console.error(error) || process.exit(1))
