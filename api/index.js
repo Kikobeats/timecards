@@ -24,21 +24,6 @@ const proxyUrl = url =>
 const baseUrl = ({ headers }) =>
   `${headers.get('x-forwarded-proto')}://${headers.get('x-forwarded-host')}`
 
-const image = async url => {
-  const res = await fetch(proxyUrl(url))
-  return [
-    res.body,
-    {
-      headers: {
-        'access-control-allow-origin': '*',
-        'cache-control': 'public, max-age=31536000, immutable',
-        'content-type': res.headers.get('content-type'),
-        'content-length': res.headers.get('content-length')
-      }
-    }
-  ]
-}
-
 export default async req => {
   const urlObj = new URL(req.url, baseUrl(req))
   const timestamp = urlObj.searchParams.get('t')
@@ -48,5 +33,12 @@ export default async req => {
     return Response.redirect(urlObj.toString())
   }
 
-  return new Response(...(await image(rand().url)))
+  const imageUrl = proxyUrl(rand().url)
+  return new Response(JSON.stringify({ url: imageUrl }), {
+    headers: {
+      'access-control-allow-origin': '*',
+      'cache-control': 'public, max-age=31536000, immutable',
+      'content-type': 'application/json'
+    }
+  })
 }
