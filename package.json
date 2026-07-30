@@ -1,6 +1,6 @@
 {
   "name": "timecards",
-  "description": "Bob Sponja time cards as service",
+  "description": "SpongeBob-style time card images as a microservice — generate classic title cards on demand.",
   "homepage": "https://github.com/Kikobeats/timecards",
   "version": "0.0.0",
   "main": "src/index.js",
@@ -19,10 +19,16 @@
     "url": "https://github.com/Kikobeats/timecards/issues"
   },
   "keywords": [
+    "api",
+    "generator",
+    "gif",
+    "image",
+    "media",
+    "meme",
     "microservice",
-    "bob",
-    "sponja",
-    "timecards"
+    "spongebob",
+    "timecards",
+    "title-card"
   ],
   "dependencies": {
     "unique-random-array": "latest"
@@ -43,8 +49,8 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "postinstall": "node scripts/postinstall",
     "lint": "standard-markdown README.md && standard",
+    "postinstall": "node scripts/postinstall",
     "pretest": "npm run lint",
     "test": "exit 0"
   },
